@@ -1,5 +1,9 @@
-# Placehold
-> Generate Placeholder Images on the Fly
+<p align="center">
+  <a href="https://placehold.vercel.app">
+    <img src="https://placehold.vercel.app/600x400">
+  </a>
+  <h1 align="center">Placehold</h1>
+</a>
 
 Placehold is a web application that allows you to generate placeholder images dynamically. It's built using modern web technologies to provide an easy and efficient way to create image placeholders for your projects.
 
