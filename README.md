@@ -27,3 +27,8 @@ To generate image of width 512 and height 512
 ```
 https://placehold.vercel.app/512
 ```
+
+
+## Inspired by
+
+The project is inspired by [placehold.co](https://placehold.co/)
