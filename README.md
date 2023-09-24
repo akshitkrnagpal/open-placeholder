@@ -8,10 +8,10 @@
 Placehold is a web application that allows you to generate placeholder images dynamically. It's built using modern web technologies to provide an easy and efficient way to create image placeholders for your projects.
 
 ## Built With
-- [Next.js](https://nextjs.org/?ref=https://github.com/akshitkrnagpal/brokkn)
-- [React.js](https://reactjs.org/?ref=https://github.com/akshitkrnagpal/brokkn)
-- [Tailwind CSS](https://tailwindcss.com/?ref=https://github.com/akshitkrnagpal/brokkn)
-- [@vercel/og](https://www.npmjs.com/package/@vercel/og)
+- [Next.js](https://nextjs.org/?ref=https://github.com/akshitkrnagpal/placehold)
+- [React.js](https://reactjs.org/?ref=https://github.com/akshitkrnagpal/placehold)
+- [Tailwind CSS](https://tailwindcss.com/?ref=https://github.com/akshitkrnagpal/placehold)
+- [@vercel/og](https://www.npmjs.com/package/@vercel/og?ref=https://github.com/akshitkrnagpal/placehold)
 
 ## Deploy Your Own
 
