@@ -1,35 +1,35 @@
 <p align="center">
-  <a href="https://placehold.vercel.app">
-    <img src="https://placehold.vercel.app/600x400">
+  <a href="https://open-placeholder.vercel.app">
+    <img src="https://open-placeholder.vercel.app/600x400">
   </a>
-  <h1 align="center">Placehold</h1>
+  <h1 align="center">Open Placeholder</h1>
 </a>
 
-Placehold is a web application that allows you to generate placeholder images dynamically. It's built using modern web technologies to provide an easy and efficient way to create image placeholders for your projects.
+Open Placeholder is a web application that allows you to generate placeholder images dynamically. It's built using modern web technologies to provide an easy and efficient way to create image placeholders for your projects.
 
 ## Built With
-- [Next.js](https://nextjs.org/?ref=https://github.com/akshitkrnagpal/placehold)
-- [React.js](https://reactjs.org/?ref=https://github.com/akshitkrnagpal/placehold)
-- [Tailwind CSS](https://tailwindcss.com/?ref=https://github.com/akshitkrnagpal/placehold)
-- [@vercel/og](https://www.npmjs.com/package/@vercel/og?ref=https://github.com/akshitkrnagpal/placehold)
+- [Next.js](https://nextjs.org/?ref=https://github.com/akshitkrnagpal/open-placeholder)
+- [React.js](https://reactjs.org/?ref=https://github.com/akshitkrnagpal/open-placeholder)
+- [Tailwind CSS](https://tailwindcss.com/?ref=https://github.com/akshitkrnagpal/open-placeholder)
+- [@vercel/og](https://www.npmjs.com/package/@vercel/og?ref=https://github.com/akshitkrnagpal/open-placeholder)
 
 ## Deploy Your Own
 
-You can deploy your own version of the Placehold to Vercel with one click:
+You can deploy your own version of the Open Placeholder to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fakshitkrnagpal%2Fplacehold)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fakshitkrnagpal%2Fopen-placeholder)
 
 ## Usage 
 
 ### Sizes
 To generate image of width 600 and height 400.
 ```
-https://placehold.vercel.app/600x400
+https://open-placeholder.vercel.app/600x400
 ```
 
 To generate image of width 512 and height 512
 ```
-https://placehold.vercel.app/512
+https://open-placeholder.vercel.app/512
 ```
 
 
