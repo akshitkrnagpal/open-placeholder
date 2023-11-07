@@ -4,7 +4,7 @@ export const getFonts = async (): Promise<ImageResponseOptions['fonts']> => {
   const fontFamily = 'Geist';
 
   const fontData = await fetch(
-    new URL('./fonts/geist/Geist-Regular.otf', import.meta.url)
+    new URL('./geist/Geist-Regular.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return [
