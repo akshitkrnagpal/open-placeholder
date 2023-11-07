@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { mapKeys, camel, pascal } from 'radash';
+import { pascal } from 'radash';
 
 const schema = z
   .object({
@@ -12,8 +12,6 @@ const schema = z
     ...data,
     stargazersCount: stargazers_count,
   }));
-
-type Data = z.infer<typeof schema>;
 
 export const getGithubRepoData = async () => {
   const response = await fetch(
