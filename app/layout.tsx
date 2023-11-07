@@ -1,12 +1,15 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { GeistSans, GeistMono } from 'geist/font';
+import { getGithubRepoData } from '@/utils/data';
 
-export const metadata: Metadata = {
-  title: 'OpenPlaceholder',
-  description:
-    'OpenPlaceholder is a free, open-source placeholder service using @vercel/og',
-};
+export async function generateMetadata() {
+  const { name, description } = await getGithubRepoData();
+  return {
+    title: name,
+    description,
+  };
+}
 
 export default function RootLayout({
   children,
