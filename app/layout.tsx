@@ -3,8 +3,9 @@ import type { Metadata } from 'next';
 import { GeistSans, GeistMono } from 'geist/font';
 
 export const metadata: Metadata = {
-  title: 'Placehold',
-  description: 'Placehold NextJs Template using @vercel/og.',
+  title: 'OpenPlaceholder',
+  description:
+    'OpenPlaceholder is a free, open-source placeholder service using @vercel/og',
 };
 
 export default function RootLayout({
