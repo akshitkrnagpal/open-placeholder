@@ -44,6 +44,11 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.5.2.tgz#1c09e6cf1df8b1edf3cf0ca9c0e0119a49802a5d"
   integrity sha512-dUseBIQVax+XtdJPzhwww4GetTjlkRSsXeQnisIJWBaHsnxYcN2RGzsPHi58D6qnkATjnhuAtQTJmR1hKYQQPg==
 
+"@next/font@^13.5.6":
+  version "13.5.6"
+  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.5.6.tgz#2659cfbd9298e21c4ff734bb863d139ef6971cb8"
+  integrity sha512-urmUq05uCVJsBqAAJEV+xK5OTTodrSxdiG+351SOSjlWctywdBM6qX+K9pIe3K48RxjfnxlBbXjGyOJAji+pfw==
+
 "@next/swc-darwin-arm64@13.5.2":
   version "13.5.2"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.5.2.tgz#f099a36fdd06b1949eb4e190aee95a52b97d3885"
@@ -334,6 +339,13 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+geist@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/geist/-/geist-1.0.0.tgz#d3f9d0d99da03cab7d5eada1e1fccfa023384bc5"
+  integrity sha512-7hqXZqIdSiFbXjlMZ8Ag0fBAW8RzUjIXPkh160rT4m4ECMtsKdFX+06e0mK28oRCpU+lOB1C5Es8qxzvv7H2Hg==
+  dependencies:
+    "@next/font" "^13.5.6"
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"

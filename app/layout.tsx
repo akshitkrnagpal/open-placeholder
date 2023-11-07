@@ -1,8 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Josefin_Sans } from 'next/font/google';
-
-const font = Josefin_Sans({ subsets: ['latin'] });
+import { GeistSans, GeistMono } from 'geist/font';
 
 export const metadata: Metadata = {
   title: 'Placehold',
@@ -15,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={font.className}>{children}</body>
+    <html lang='en' className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className='font-sans'>{children}</body>
     </html>
   );
 }
