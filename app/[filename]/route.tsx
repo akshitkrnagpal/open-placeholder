@@ -1,6 +1,6 @@
 import { getFonts } from '@/fonts';
 import { getPlaceholdOptions } from '@/utils/parser';
-import { ImageResponse } from 'next/server';
+import { ImageResponse } from 'next/og';
 
 type Params = {
   filename: string;
