@@ -2,14 +2,15 @@ import { getFonts } from '@/fonts';
 import { getPlaceholdOptions } from '@/utils/parser';
 import { ImageResponse } from 'next/og';
 
-type Params = {
+type Params = Promise<{
   filename: string;
-};
+}>;
 
 export const runtime = 'edge';
 
 export async function GET(request: Request, { params }: { params: Params }) {
-  const options = getPlaceholdOptions(params.filename);
+  const { filename } = await params;
+  const options = getPlaceholdOptions(filename);
   const fontSize = Math.min(options.width, options.height) / 5;
   return new ImageResponse(
     (
