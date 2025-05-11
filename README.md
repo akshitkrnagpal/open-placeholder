@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://open-placeholder.vercel.app">
-    <img src="https://open-placeholder.vercel.app/600x400">
+  <a href="https://openplaceholder.com">
+    <img src="https://openplaceholder.com/600x400">
   </a>
   <h1 align="center">Open Placeholder</h1>
 </a>
@@ -24,12 +24,12 @@ You can deploy your own version of the Open Placeholder to Vercel with one click
 ### Sizes
 To generate image of width 600 and height 400.
 ```
-https://open-placeholder.vercel.app/600x400
+https://openplaceholder.com/600x400
 ```
 
 To generate image of width 512 and height 512
 ```
-https://open-placeholder.vercel.app/512
+https://openplaceholder.com/512
 ```
 
 
