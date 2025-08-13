@@ -17,6 +17,19 @@ export async function generateMetadata() {
   return {
     title: name,
     description,
+    metadataBase: new URL('https://openplaceholder.com'),
+    openGraph: {
+      title: name,
+      description,
+      type: 'website',
+      images: ['/800x400/Open%20Placeholder'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: name,
+      description,
+      images: ['/800x400/Open%20Placeholder'],
+    },
   };
 }
 
@@ -27,6 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`${geist.variable} ${geistMono.variable}`}>
+      <head>
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </head>
       <body className={`${geist.className} font-sans`}>{children}</body>
     </html>
   );

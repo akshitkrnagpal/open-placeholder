@@ -19,7 +19,7 @@ async function getFontData(): Promise<ArrayBuffer> {
   return fontCache as ArrayBuffer;
 }
 
-export async function GET(request: Request, { params }: { params: Params }) {
+export async function GET(_request: Request, { params }: { params: Params }) {
   const { filename } = await params;
   // Join the array segments back into a single string
   const fullPath = filename.join('/');
