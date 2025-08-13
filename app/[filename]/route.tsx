@@ -1,4 +1,3 @@
-import { getFonts } from '@/fonts';
 import { getPlaceholdOptions } from '@/utils/parser';
 import { ImageResponse } from 'next/og';
 
@@ -12,6 +11,11 @@ export async function GET(request: Request, { params }: { params: Params }) {
   const { filename } = await params;
   const options = getPlaceholdOptions(filename);
   const fontSize = Math.min(options.width, options.height) / 5;
+  
+  const fontData = await fetch(
+    new URL('../../fonts/geist/Geist-Regular.otf', import.meta.url)
+  ).then((res) => res.arrayBuffer());
+  
   return new ImageResponse(
     (
       <div
@@ -33,7 +37,14 @@ export async function GET(request: Request, { params }: { params: Params }) {
     {
       width: options.width,
       height: options.height,
-      fonts: await getFonts(),
+      fonts: [
+        {
+          name: 'Geist',
+          data: fontData,
+          style: 'normal',
+          weight: 400,
+        },
+      ],
     }
   );
 }

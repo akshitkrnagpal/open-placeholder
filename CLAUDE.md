@@ -37,9 +37,9 @@ npm run lint       # Run ESLint to check code quality
      - Square: `N` (e.g., `512` creates 512x512)
    - Falls back to 600x400 for invalid inputs
 
-3. **Font Loading** (`fonts/index.ts`)
-   - Loads Geist Regular font for image text
-   - Returns ArrayBuffer for use with @vercel/og
+3. **Font Loading** (Hybrid approach)
+   - Layout uses Geist and Geist_Mono from `next/font/google` for optimal web performance
+   - Image generation uses local `fonts/geist/Geist-Regular.otf` file to avoid external CDN fetches in Edge Runtime
 
 ### Frontend Architecture
 
@@ -52,7 +52,7 @@ npm run lint       # Run ESLint to check code quality
 - **Runtime**: Edge Runtime for the image generation API route
 - **Image Generation**: Uses `@vercel/og` (formerly `next/server`) for SVG-based image generation
 - **Type Safety**: Zod schemas validate all external data (URL params, API responses)
-- **Font Assets**: Geist fonts are loaded from local files in `fonts/geist/`
+- **Font Loading**: Hybrid approach - `next/font/google` for app layout, local OTF file for image generation
 - **URL Pattern**: The `[filename]` dynamic segment captures the entire path parameter
 
 ## Development Workflow
