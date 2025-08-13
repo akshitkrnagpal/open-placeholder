@@ -7,14 +7,25 @@ type Params = Promise<{
 
 export const runtime = 'edge';
 
+// Cache the font data to avoid repeated fetches
+let fontCache: ArrayBuffer | null = null;
+
+async function getFontData(): Promise<ArrayBuffer> {
+  if (!fontCache) {
+    fontCache = await fetch(
+      new URL('../../fonts/geist/Geist-Regular.otf', import.meta.url)
+    ).then((res) => res.arrayBuffer());
+  }
+  return fontCache as ArrayBuffer;
+}
+
 export async function GET(request: Request, { params }: { params: Params }) {
   const { filename } = await params;
   const options = getPlaceholdOptions(filename);
   const fontSize = Math.min(options.width, options.height) / 5;
   
-  const fontData = await fetch(
-    new URL('../../fonts/geist/Geist-Regular.otf', import.meta.url)
-  ).then((res) => res.arrayBuffer());
+  // Use cached font data
+  const fontData = await getFontData();
   
   return new ImageResponse(
     (
@@ -45,6 +56,10 @@ export async function GET(request: Request, { params }: { params: Params }) {
           weight: 400,
         },
       ],
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable',
+        'CDN-Cache-Control': 'public, max-age=31536000',
+      },
     }
   );
 }
