@@ -25,6 +25,11 @@ export async function GET(request: Request, { params }: { params: Params }) {
   const fullPath = filename.join('/');
   const options = getPlaceholdOptions(fullPath);
   
+  // Return 404 if the URL is invalid
+  if (!options) {
+    return new Response('Not Found', { status: 404 });
+  }
+  
   // Calculate font size based on text length and image dimensions
   const displayText = options.text || `${options.width} x ${options.height}`;
   const baseFontSize = Math.min(options.width, options.height) / 5;
