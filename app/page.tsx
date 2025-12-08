@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default async function Home() {
   const { name, description } = await getGithubRepoData();
-  
+
   const examples = [
     {
       title: 'Basic Rectangle',
@@ -53,7 +53,9 @@ export default async function Home() {
           <h2 className='text-2xl font-bold text-white mb-6'>How to Use</h2>
           <div className='space-y-4'>
             <div className='bg-gray-800 rounded p-4'>
-              <h3 className='text-lg font-semibold text-white mb-2'>Basic Usage</h3>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Basic Usage
+              </h3>
               <code className='text-green-400 bg-gray-950 px-2 py-1 rounded'>
                 https://openplaceholder.com/[width]x[height]
               </code>
@@ -61,9 +63,11 @@ export default async function Home() {
                 Replace [width] and [height] with your desired dimensions
               </p>
             </div>
-            
+
             <div className='bg-gray-800 rounded p-4'>
-              <h3 className='text-lg font-semibold text-white mb-2'>Square Images</h3>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Square Images
+              </h3>
               <code className='text-green-400 bg-gray-950 px-2 py-1 rounded'>
                 https://openplaceholder.com/[size]
               </code>
@@ -71,9 +75,11 @@ export default async function Home() {
                 Single value creates a square image
               </p>
             </div>
-            
+
             <div className='bg-gray-800 rounded p-4'>
-              <h3 className='text-lg font-semibold text-white mb-2'>Custom Text</h3>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Custom Text
+              </h3>
               <code className='text-green-400 bg-gray-950 px-2 py-1 rounded'>
                 https://openplaceholder.com/[width]x[height]/[text]
               </code>
@@ -86,12 +92,18 @@ export default async function Home() {
 
         {/* Examples Section */}
         <div className='mb-12'>
-          <h2 className='text-2xl font-bold text-white mb-6 text-center'>Examples</h2>
+          <h2 className='text-2xl font-bold text-white mb-6 text-center'>
+            Examples
+          </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {examples.map((example) => (
               <div key={example.url} className='bg-gray-900 rounded-lg p-6'>
-                <h3 className='text-lg font-semibold text-white mb-2'>{example.title}</h3>
-                <p className='text-gray-400 text-sm mb-3'>{example.description}</p>
+                <h3 className='text-lg font-semibold text-white mb-2'>
+                  {example.title}
+                </h3>
+                <p className='text-gray-400 text-sm mb-3'>
+                  {example.description}
+                </p>
                 <div className='mb-3'>
                   <code className='text-green-400 bg-gray-950 px-2 py-1 rounded text-sm break-all'>
                     {example.url}
@@ -143,7 +155,9 @@ export default async function Home() {
 
         {/* Deploy Section */}
         <div className='text-center'>
-          <h2 className='text-2xl font-bold text-white mb-4'>Deploy Your Own</h2>
+          <h2 className='text-2xl font-bold text-white mb-4'>
+            Deploy Your Own
+          </h2>
           <p className='text-gray-300 mb-6'>
             Get your own placeholder image service in seconds
           </p>
@@ -155,6 +169,21 @@ export default async function Home() {
           >
             Deploy with Vercel
           </a>
+        </div>
+
+        {/* Footer */}
+        <div className='text-center mt-16 pt-8 border-t border-gray-700'>
+          <p className='text-gray-400'>
+            Made with <span className='text-red-500'>♥</span> by{' '}
+            <a
+              href='https://akshit.io'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-white hover:text-green-400 transition-colors'
+            >
+              Akshit Kr Nagpal
+            </a>
+          </p>
         </div>
       </div>
     </main>
