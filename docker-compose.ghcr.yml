@@ -1,0 +1,12 @@
+services:
+  open-placeholder:
+    image: ghcr.io/veruslucian/open-placeholder:latest
+    container_name: open-placeholder
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
