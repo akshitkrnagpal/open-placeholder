@@ -1,6 +1,6 @@
 services:
   open-placeholder:
-    image: ghcr.io/veruslucian/open-placeholder:latest
+    image: ghcr.io/akshitkrnagpal/open-placeholder:latest
     container_name: open-placeholder
     restart: unless-stopped
     ports:
