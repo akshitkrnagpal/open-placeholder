@@ -137,6 +137,22 @@ npm run build
 npm run start
 ```
 
+### Docker
+
+Pull and run the pre-built image from GitHub Container Registry:
+
+```bash
+docker run -p 3000:3000 ghcr.io/veruslucian/jellyfin-cover-generator:latest
+```
+
+Or using Docker Compose:
+
+```bash
+docker compose -f docker-compose.ghcr.yml up -d
+```
+
+The app will be available at `http://localhost:3000`.
+
 ### Environment Variables
 
 No environment variables are required for basic functionality. The app works out of the box!
