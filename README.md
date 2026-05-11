@@ -109,6 +109,14 @@ Deploy your own instance with one click:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fakshitkrnagpal%2Fopen-placeholder)
 
+### Deploy to Diploi 
+
+Launch Open Placeholder on Diploi in one click and get a live instance running in seconds.
+
+[![launch with diploi button](https://diploi.com/launch-big.svg)](https://diploi.com/launch/akshitkrnagpal/open-placeholder)
+
+Learn more on [Diploi](https://diploi.com/).
+
 ### Self-Hosting
 
 1. Clone the repository:
