@@ -54,6 +54,16 @@ Display custom text instead of dimensions:
 https://openplaceholder.com/600x300/Hello%20World
 ```
 
+### Layout Presets
+
+Use `layout` for common banner compositions. The default layout is unchanged when this parameter is omitted.
+```
+https://openplaceholder.com/1200x630/Product%20Launch?layout=hero
+https://openplaceholder.com/800x400/New%20Feature?layout=badge
+https://openplaceholder.com/1200x600/Case%20Study?layout=split
+https://openplaceholder.com/900x1200/Event%20Poster?layout=poster
+```
+
 ## 📖 API Reference
 
 ### URL Format
@@ -69,6 +79,7 @@ https://openplaceholder.com/[width]x[height]/[text]
 | `width` | number | Image width in pixels (1-4000) | `600` |
 | `height` | number | Image height in pixels (1-4000) | `400` |
 | `text` | string | Optional custom text (URL encoded) | `Hello%20World` |
+| `layout` | query string | Optional preset: `hero`, `badge`, `split`, or `poster` | `?layout=hero` |
 
 ### Examples
 
@@ -89,7 +100,22 @@ https://openplaceholder.com/[width]x[height]/[text]
 
 #### Banner with Text
 ```html
-<img src="https://openplaceholder.com/1200x400/Hero%20Banner" alt="Hero Banner">
+<img src="https://openplaceholder.com/1200x400/Hero%20Banner?layout=hero" alt="Hero Banner">
+```
+
+#### Badge Layout
+```html
+<img src="https://openplaceholder.com/800x400/Stable?layout=badge" alt="Stable badge">
+```
+
+#### Split Layout
+```html
+<img src="https://openplaceholder.com/1200x600/Case%20Study?layout=split" alt="Case Study">
+```
+
+#### Poster Layout
+```html
+<img src="https://openplaceholder.com/900x1200/Event%20Poster?layout=poster" alt="Event Poster">
 ```
 
 ## 🛠️ Built With
