@@ -11,11 +11,17 @@ export interface PlaceholderOptions {
   text?: string;
 }
 
+const shortcuts: Record<string, Pick<PlaceholderOptions, 'width' | 'height'>> = {
+  og: { width: 1200, height: 630 },
+  banner: { width: 1200, height: 400 },
+  wide: { width: 1600, height: 900 },
+};
+
 export const getPlaceholdOptions = (filename: string): PlaceholderOptions | null => {
   try {
     // Check if there's custom text after a slash
     const parts = filename.split('/');
-    let dimensions = parts[0];
+    const dimensions = parts[0];
     let customText: string | undefined;
     
     if (parts.length > 1) {
@@ -23,7 +29,16 @@ export const getPlaceholdOptions = (filename: string): PlaceholderOptions | null
       customText = decodeURIComponent(parts.slice(1).join('/'));
     }
     
-    // Parse dimensions (support both 600x400 and 600 formats)
+    // Parse shortcuts or dimensions (support both 600x400 and 600 formats)
+    const shortcut = shortcuts[dimensions];
+
+    if (shortcut) {
+      return {
+        ...shortcut,
+        text: customText,
+      };
+    }
+
     const [width, height] = dimensions.split('x');
     
     // Return null if width is not a valid number

@@ -54,12 +54,28 @@ Display custom text instead of dimensions:
 https://openplaceholder.com/600x300/Hello%20World
 ```
 
+### Shortcut Sizes
+
+Use common aspect-ratio shortcuts without typing dimensions:
+```
+https://openplaceholder.com/og/Product%20Launch
+https://openplaceholder.com/banner/Hero%20Banner
+https://openplaceholder.com/wide/Video%20Thumbnail
+```
+
+| Shortcut | Dimensions | Common use |
+|----------|------------|------------|
+| `og` | 1200x630 | Open Graph/social preview images |
+| `banner` | 1200x400 | Hero and page banners |
+| `wide` | 1600x900 | 16:9 thumbnails and previews |
+
 ## 📖 API Reference
 
 ### URL Format
 
 ```
 https://openplaceholder.com/[width]x[height]/[text]
+https://openplaceholder.com/[shortcut]/[text]
 ```
 
 ### Parameters
@@ -68,6 +84,7 @@ https://openplaceholder.com/[width]x[height]/[text]
 |-----------|------|-------------|---------|
 | `width` | number | Image width in pixels (1-4000) | `600` |
 | `height` | number | Image height in pixels (1-4000) | `400` |
+| `shortcut` | string | Optional preset size (`og`, `banner`, `wide`) | `og` |
 | `text` | string | Optional custom text (URL encoded) | `Hello%20World` |
 
 ### Examples
@@ -90,6 +107,11 @@ https://openplaceholder.com/[width]x[height]/[text]
 #### Banner with Text
 ```html
 <img src="https://openplaceholder.com/1200x400/Hero%20Banner" alt="Hero Banner">
+```
+
+#### Shortcut Size
+```html
+<img src="https://openplaceholder.com/og/Product%20Launch" alt="Product Launch">
 ```
 
 ## 🛠️ Built With
