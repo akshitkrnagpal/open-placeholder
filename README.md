@@ -26,6 +26,7 @@ Open Placeholder is a high-performance placeholder image generator built with Ne
 - 🚀 **Edge Runtime** - Lightning-fast image generation at the edge
 - 📐 **Flexible Sizing** - Support for any dimensions up to 4000x4000 pixels
 - 📝 **Custom Text** - Display custom text instead of dimensions
+- 🧩 **Pattern Backgrounds** - Optional grid, dots, and stripes patterns
 - 💾 **Smart Caching** - Optimized with CDN cache headers for performance
 - 🎨 **Clean Design** - Minimalist aesthetic with Geist font
 - 🔧 **Zero Configuration** - Works out of the box with sensible defaults
@@ -54,6 +55,15 @@ Display custom text instead of dimensions:
 https://openplaceholder.com/600x300/Hello%20World
 ```
 
+### Pattern Backgrounds
+
+Add a generated background pattern:
+```
+https://openplaceholder.com/600x300/Hello%20World?pattern=grid
+```
+
+Supported values are `grid`, `dots`, `stripes`, and `none`. The default is `none`.
+
 ## 📖 API Reference
 
 ### URL Format
@@ -69,6 +79,7 @@ https://openplaceholder.com/[width]x[height]/[text]
 | `width` | number | Image width in pixels (1-4000) | `600` |
 | `height` | number | Image height in pixels (1-4000) | `400` |
 | `text` | string | Optional custom text (URL encoded) | `Hello%20World` |
+| `pattern` | query string | Optional background pattern. Defaults to `none`; valid values are `grid`, `dots`, `stripes`, and `none`. | `grid` |
 
 ### Examples
 
@@ -90,6 +101,11 @@ https://openplaceholder.com/[width]x[height]/[text]
 #### Banner with Text
 ```html
 <img src="https://openplaceholder.com/1200x400/Hero%20Banner" alt="Hero Banner">
+```
+
+#### Pattern Background
+```html
+<img src="https://openplaceholder.com/600x300/Hello%20World?pattern=dots" alt="Pattern placeholder">
 ```
 
 ## 🛠️ Built With
