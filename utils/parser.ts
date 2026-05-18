@@ -1,5 +1,9 @@
 import { z } from 'zod';
 
+const layoutSchema = z.enum(['hero', 'badge', 'split', 'poster']);
+
+export type PlaceholderLayout = z.infer<typeof layoutSchema>;
+
 const optionsSchema = z.object({
   width: z.coerce.number().positive().min(1).max(4000),
   height: z.coerce.number().positive().min(1).max(4000),
@@ -9,9 +13,13 @@ export interface PlaceholderOptions {
   width: number;
   height: number;
   text?: string;
+  layout?: PlaceholderLayout;
 }
 
-export const getPlaceholdOptions = (filename: string): PlaceholderOptions | null => {
+export const getPlaceholdOptions = (
+  filename: string,
+  layout?: string | null
+): PlaceholderOptions | null => {
   try {
     // Check if there's custom text after a slash
     const parts = filename.split('/');
@@ -36,9 +44,12 @@ export const getPlaceholdOptions = (filename: string): PlaceholderOptions | null
       height: height ?? width 
     });
     
+    const parsedLayout = layoutSchema.safeParse(layout);
+
     return {
       ...parsedOptions,
       text: customText,
+      layout: parsedLayout.success ? parsedLayout.data : undefined,
     };
   } catch (error) {
     // Return null for any parsing errors
