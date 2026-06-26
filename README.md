@@ -114,6 +114,28 @@ https://openplaceholder.com/[shortcut]/[text]
 <img src="https://openplaceholder.com/og/Product%20Launch" alt="Product Launch">
 ```
 
+
+## 🤖 Agent Skill
+
+Use Open Placeholder automatically in generated frontend code with the companion agent skill:
+
+```bash
+npx skills add open-placeholder/skills
+```
+
+Claude Code plugin:
+
+```txt
+/plugin marketplace add open-placeholder/skills
+/plugin install open-placeholder@open-placeholder
+```
+
+Codex plugin:
+
+```bash
+codex plugin marketplace add open-placeholder/skills
+```
+
 ## 🛠️ Built With
 
 - **[Next.js 15](https://nextjs.org)** - React framework with App Router
@@ -135,7 +157,7 @@ Deploy your own instance with one click:
 
 Launch Open Placeholder on Diploi in one click and get a live instance running in seconds.
 
-[![launch with diploi button](https://diploi.com/launch-big.svg)](https://diploi.com/launch/akshitkrnagpal/open-placeholder)
+[![launch with diploi button](https://diploi.com/launch-big.svg)](https://diploi.com/launch/open-placeholder/open-placeholder)
 
 Learn more on [Diploi](https://diploi.com/).
 
@@ -143,7 +165,7 @@ Learn more on [Diploi](https://diploi.com/).
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/akshitkrnagpal/open-placeholder.git
+git clone https://github.com/open-placeholder/open-placeholder.git
 cd open-placeholder
 ```
 
@@ -182,7 +204,7 @@ No environment variables are required for basic functionality. The app works out
 
 ```bash
 # Clone the repo
-git clone https://github.com/akshitkrnagpal/open-placeholder.git
+git clone https://github.com/open-placeholder/open-placeholder.git
 cd open-placeholder
 
 # Install dependencies
@@ -240,8 +262,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📊 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/akshitkrnagpal/open-placeholder?style=social)
-![GitHub forks](https://img.shields.io/github/forks/akshitkrnagpal/open-placeholder?style=social)
+![GitHub stars](https://img.shields.io/github/stars/open-placeholder/open-placeholder?style=social)
+![GitHub forks](https://img.shields.io/github/forks/open-placeholder/open-placeholder?style=social)
 
 ---
 

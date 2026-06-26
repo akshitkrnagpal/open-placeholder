@@ -162,7 +162,7 @@ export default async function Home() {
             Get your own placeholder image service in seconds
           </p>
           <a
-            href='https://vercel.com/new/clone?repository-url=https://github.com/akshitkrnagpal/open-placeholder'
+            href='https://vercel.com/new/clone?repository-url=https://github.com/open-placeholder/open-placeholder'
             target='_blank'
             rel='noopener noreferrer'
             className='inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors'
