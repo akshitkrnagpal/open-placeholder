@@ -151,7 +151,7 @@ codex plugin marketplace add open-placeholder/skills
 
 Deploy your own instance with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fakshitkrnagpal%2Fopen-placeholder)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fopen-placeholder%2Fopen-placeholder)
 
 ### Deploy to Diploi 
 

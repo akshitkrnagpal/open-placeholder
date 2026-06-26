@@ -40,7 +40,7 @@ export default async function Home() {
           </p>
           <div className='flex items-center w-[170px] mx-auto mt-6'>
             <iframe
-              src='https://ghbtns.com/github-btn.html?user=akshitkrnagpal&repo=open-placeholder&type=star&count=true&size=large'
+              src='https://ghbtns.com/github-btn.html?user=open-placeholder&repo=open-placeholder&type=star&count=true&size=large'
               width='170'
               height='30'
               title='GitHub'
